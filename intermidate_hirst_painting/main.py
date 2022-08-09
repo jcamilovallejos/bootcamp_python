@@ -5,6 +5,8 @@ from turtle import Turtle, Screen
 colors = colorgram.extract('61RQCX9SJKL.jpg', 8)
 list_colors = []
 my_dot = Turtle()
+my_dot.speed("fastest")
+my_dot.hideturtle()
 for item in range(len(colors)):
     r = colors[item].rgb.r / 255
     g = colors[item].rgb.g / 255
@@ -12,7 +14,7 @@ for item in range(len(colors)):
     list_colors.append((r, g, b))
 
 count = 0
-for item in range(40):
+for item in range(50):
     if (item+1) % 10 == 0:
         my_dot.penup()
         count += 1
